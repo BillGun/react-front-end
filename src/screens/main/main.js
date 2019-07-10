@@ -1,13 +1,9 @@
 import React from "react";
 
 import { connect } from "react-redux";
-import { Navigate } from "../../redux/actions";
+import { mapDispatchNavigationToProps } from "../../redux/actionCreators";
 
-const mapDispatchToProps = dispatch => {
-  return {
-    navigate: destination => dispatch(Navigate(destination))
-  };
-};
+import { TextInput } from "react-materialize";
 
 class Main extends React.Component {
   constructor(props) {
@@ -21,11 +17,15 @@ class Main extends React.Component {
   }
 
   render() {
-    return <p>Home</p>;
+    return (
+      <div className="card-panel lighten-2">
+        <p>Home</p>
+      </div>
+    );
   }
 }
 
 export default connect(
   null,
-  mapDispatchToProps
+  mapDispatchNavigationToProps
 )(Main);

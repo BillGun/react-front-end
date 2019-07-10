@@ -1,2 +1,2 @@
 - [x] If you go to any url path without clicking the navbar link Redux won't have the current state
-- [ ] Make global mapDispatchToProps so dont need to create it multiple times in screens
+- [x] Make global mapDispatchToProps so dont need to create it multiple times in screens
