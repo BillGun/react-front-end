@@ -2,8 +2,7 @@ import React from "react";
 
 import { connect } from "react-redux";
 import { mapDispatchNavigationToProps } from "../../redux/actionCreators";
-
-import { TextInput } from "react-materialize";
+import Button from "@material-ui/core/Button";
 
 class Main extends React.Component {
   constructor(props) {
@@ -18,8 +17,11 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className="card-panel lighten-2">
+      <div>
         <p>Home</p>
+        <Button variant="contained" color="primary">
+          Hello World
+        </Button>
       </div>
     );
   }

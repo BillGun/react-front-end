@@ -8,6 +8,8 @@ import { Navigate } from "../../redux/actions";
 import Main from "../../screens/main/main";
 import Login from "../../screens/login/login";
 
+import "./navbar.css";
+
 function mapStateToProps(state) {
   console.log(state);
   const { navigate } = state;
@@ -31,8 +33,13 @@ class Navbar extends React.Component {
   }
 
   render() {
+    // const menuItem = [
+    //   { name: "Home", options: { float: "left" } },
+    //   { name: "Login", options: { float: "right" } }
+    // ];
+
     return (
-      <div>
+      <nav>
         <Router>
           <div>
             <ul>
@@ -54,8 +61,8 @@ class Navbar extends React.Component {
             <Route path="/login" component={Login} />
           </div>
         </Router>
-        <h1>{this.props.text}</h1>
-      </div>
+        {/* <h1>{this.props.text}</h1> */}
+      </nav>
     );
   }
 }
